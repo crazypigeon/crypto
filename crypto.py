@@ -7,6 +7,6 @@ parser = argparse.ArgumentParser(description='Test')
 
 parser.add_argument('-c',nargs='+',required=True,help='crypt some text',metavar='text to encrypt')
 
-crypt_text = str(parser.parse_args().c)
+crypt_text = ' '.join(parser.parse_args().c)
 
-print(crypt_text)
+print('"' + crypt_text + '"')

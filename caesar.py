@@ -17,5 +17,7 @@ class CaesarCrypt:
             try:
                 crypt_text += (self.crypt_alpha[self.plain_alpha.index(l)])
             except ValueError:
+                if l.isspace():
+                    crypt_text += l
                 pass
         return crypt_text
